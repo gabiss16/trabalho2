@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 const resumes = [
   {
@@ -136,9 +137,12 @@ export default function ResumeSummaryPage() {
 
               {/* AÇÕES */}
               <div className="mt-8 flex gap-3">
-                <button className="flex-1 rounded-xl bg-blue-600 py-3 font-semibold text-white transition hover:bg-blue-700">
-                  Ver currículo
-                </button>
+                <Link
+                  href={`/paginas/curriculos/${resume.id}`}
+                  className="flex-1 rounded-xl bg-blue-600 py-3 text-center font-semibold text-white transition hover:bg-blue-700"
+                  >
+                 Ver currículo
+                </Link>
 
                 <button className="flex-1 rounded-xl border border-gray-300 py-3 font-semibold text-gray-700 transition hover:bg-gray-100">
                   Contatar
